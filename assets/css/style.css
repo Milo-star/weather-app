@@ -1,41 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 * {
-  box-sizing: border-box;
+  color: rgb(7, 1, 1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: linear-gradiet(300deg, #757b87, #909d9d);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  flex-direction: column;
+  background-image: radial-gradient(circle at 48.61% 49.63%, #baf7ff 0, #9fecfa 12.5%, #80dff5 25%, #59d0f1 37.5%, #0cc1ed 50%, #00b1ea 62.5%, #00a3e7 75%, #0095e4 87.5%, #0087e2 100%);
 }
 
-input {
+.title {
+  background: #121FCF;
+  background: linear-gradient(to right, #121FCF 0%, #17CFC9 59%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: 25px;
+}
+
+#button {
+  background-color: rgb(216, 210, 210);
+  padding: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#cityInput {
   padding: 1rem;
   border-radius: 25px;
   border: none;
   background-color: #fff;
   font-family: inherit;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   min-width: 300px;
   font-size: 1rem;
 }
 
-input:focus {
+#cityInput:focus {
   outline: none;
 }
 
-.weather {
-  text-align: center;
-  font-size: 2rem;
+#iconsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw 6vw;
+  justify-content: center;
 }
 
-.weather h2 {
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
+#weatherContainer {
+  display: none;
+}
+
+.icons {
+  position: relative;
+  top: 10vw;
+  background-color: white;
+  box-shadow: 0px 1px 10px 0px rgba(255, 255, 255, 0.75);
+  padding: 40px;
+  border-radius: 1vw;
+  text-align: center;
+}
+
+@media screen and (min-width: 422px) {
+  #button {
+    margin-top: 0;
+    margin-left: 1vw;
+  }
 }/*# sourceMappingURL=style.css.map */
