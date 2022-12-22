@@ -1,24 +1,4 @@
 const newName = document.getElementById('cityInput');
-const btn = document.getElementById('button');
-
-newName.addEventListener("keypress", function(event){
-    if (event.key === "Enter"){
-        event.preventDefault();
-        btn.click;
-    }
-})
-
-
-
-
-
-
-
-
-
-
-
-
 
 function GetInfo () {
   
@@ -43,7 +23,7 @@ function GetInfo () {
       document.getElementById('weatherContainer').style.display = "block";
     })
 
-    .catch(err => alert('Veuillez mettre un nom de ville valide !'));
+    .catch(err => alert('Please enter a valid city name !'));
 
     
 }
