@@ -1,4 +1,4 @@
-const newName = document.getElementById('cityInput');
+const newName = document.getElementById('cityInput')
 
 function GetInfo () {
   const cityInput = document.getElementById('cityInput')
@@ -22,32 +22,31 @@ function GetInfo () {
 
       for (i = 0; i < 5; i++) {
         const iconName = data.list[i].weather[0].icon
-        const imageUrl  = `http://openweathermap.org/img/wn/${iconName}.png`
+        const imageUrl = `http://openweathermap.org/img/wn/${iconName}.png`
         document.getElementById('img' + (i + 1)).src = imageUrl
       }
-      console.log("Data from Openweather API: ", data)
+      console.log('Data from Openweather API: ', data)
 
-      document.getElementById('weatherContainer').style.display = "block"
+      document.getElementById('weatherContainer').style.display = 'block'
     })
 
     .catch(err => {
-      console.error("Error while fetching Openweather API: ", err)
+      console.error('Error while fetching Openweather API: ', err)
       errorDiv.innerHTML = 'Please enter a valid city name !'
     })
 }
 
+const d = new Date()
+const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-function CheckDay (dayToCheckIndex) {
-  const todayDateDay = new Date().getDay()
-
-  if (dayToCheckIndex + todayDateDay > 6) {
-    return dayToCheckIndex + todayDateDay - 7
+function CheckDay (day) {
+  if (day + d.getDay() > 6) {
+    return day + d.getDay() - 7
   } else {
-    return dadayToCheckIndex + todayDateDay
+    return day + d.getDay()
   }
 }
 
-const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 for (i = 0; i < 5; i++) {
-  document.getElementById('day' + (i + 1)).innerHTML = weekdays[CheckDay(i)]
+  document.getElementById('day' + (i + 1)).innerHTML = weekday[CheckDay(i)]
 }
